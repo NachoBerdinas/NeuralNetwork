@@ -1,9 +1,23 @@
 package NeuralNetwork.Algebra;
 
 /**
- * Created by brunodeluca on 2/25/17.
+ * The Class {@code Matrix} contains methods for performing basic
+ * operations on matrices such as multiplication between matrices,
+ * scalat multiplication, sum and transpose transformation.
+ *
+ * @author Bruno De Luca
  */
+
 public class Matrix {
+
+    /**
+     * Returns the result of multiplying two matrices. If the number of columns of the
+     * fist matrix don't match the number of rows of the second matrix, it throws and
+     * exception.
+     * @param a the fist matrix
+     * @param b the second matrix
+     * @return result of both matrices multiplied.
+     */
 
     public static float[][] multiply(float[][] a, float[][] b){
         int aRow = a.length;
@@ -25,6 +39,14 @@ public class Matrix {
         return c;
     }
 
+    /**
+     * Returns the sum of two matrices. If the rows and columns of both matrices don't
+     * match, it throws an exception.
+     * @param a the fist matrix
+     * @param b the second matrix
+     * @return the sum of both matrices.
+     */
+
     public static float[][] sum(float[][] a, float[][] b){
         int aRow = a.length;
         int aColumn = a[0].length;
@@ -43,7 +65,14 @@ public class Matrix {
         return c;
     }
 
-    public static float[][] scalarMuliply(float[][] a, float b){
+    /**
+     * Returns the result of multiplying a scalar number with a matrix
+     * @param a the matrix to be multiplied
+     * @param b the scalar number
+     * @return the result of multiplying the {@param b} scalar with the {@param a} matrix
+     */
+
+    public static float[][] scalarMultiply(float[][] a, float b){
         int aRow = a.length;
         int aColumn = a[0].length;
 
@@ -57,6 +86,12 @@ public class Matrix {
 
         return c;
     }
+
+    /**
+     * Returns the transpose transformation of a matrix.
+     * @param a the matrix to be transpose
+     * @return the transpose transformation of the matrix {@param a}
+     */
 
     public static float[][] transpose(float[][] a){
         int aRow = a.length;
