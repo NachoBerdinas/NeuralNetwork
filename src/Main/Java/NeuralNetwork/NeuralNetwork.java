@@ -2,16 +2,9 @@ package NeuralNetwork;
 
 import java.util.Random;
 import NeuralNetwork.Algebra.Matrix;
-/**
- * Created by brunodeluca on 2/15/17.
- */
 
 /**
- * This class represents a neural network. It is intended to receive to inputs and
- * output one results. In between it has three hidden neurones that operate the
- * different parameters. It can be used for example to input the amount of study
- * time and the amount of sleep time; it then outputs an approximate guess of
- * the exam qualification.
+ * Created by brunodeluca on 2/15/17.
  */
 
 public class NeuralNetwork {
@@ -32,13 +25,6 @@ public class NeuralNetwork {
         this.w1 = generateRandomParameters(inputLayerSize, hiddenLayerSize);
         this.w2 = generateRandomParameters(hiddenLayerSize, outputLayerSize);
     }
-
-    /**
-     * Assign random numbers to the parameters
-     * @param row the number of rows for the new array
-     * @param col the number of columns for the new array
-     * @return a new multy-array with random floats
-     */
 
     private float[][] generateRandomParameters(int row, int col){
         float[][] w = new float[row][col];
