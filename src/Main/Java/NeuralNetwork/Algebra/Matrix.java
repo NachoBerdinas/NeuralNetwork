@@ -1,5 +1,9 @@
 package NeuralNetwork.Algebra;
 
+import java.lang.reflect.Array;
+import java.util.Queue;
+import java.util.TreeMap;
+
 /**
  * The Class {@code Matrix} contains methods for performing basic
  * operations on matrices such as multiplication between matrices,
@@ -105,6 +109,20 @@ public class Matrix {
             }
         }
         return c;
+    }
+
+    /**
+     * Prints into display any matrix given
+     * @param z the matrix to print
+     */
+
+    public void printMatrix(float[][] z){
+        for(int i = 0; i < z.length; i++){
+            for(int j = 0; j < z[i].length; j++){
+                System.out.print(z[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 
 }
