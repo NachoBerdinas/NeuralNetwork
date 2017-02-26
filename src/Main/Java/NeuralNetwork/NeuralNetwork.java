@@ -134,6 +134,9 @@ public class NeuralNetwork {
 
     /**
      * Returns a matrix with the costs given the initial values and the final result
+     *
+     * J = ∑ 0.5 * (y - y')^2
+     *
      * @param X matrix with the initial values
      * @param y matrix with the original results
      * @return matrix with the values of each cost
@@ -146,6 +149,13 @@ public class NeuralNetwork {
 
     /**
      * Returns a matrix with the costs  respect to W1 and W2 given the initial values and the final result
+     *
+     *  dj/dW2 = (a2)^T * ẟ3
+     *  ẟ3 = -(y - y) * ƒ'(z3)
+     *
+     *  dj/dW1 = X^T * ẟ2
+     *  ẟ2 = ẟ3 * (W2)^T * ƒ'(z2)
+     *
      * @param X matrix with the initial values
      * @param y matrix with the original results
      * @return matrix with the values of each cost

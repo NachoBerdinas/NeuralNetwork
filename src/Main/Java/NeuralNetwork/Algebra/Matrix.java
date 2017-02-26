@@ -1,8 +1,10 @@
 package NeuralNetwork.Algebra;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Queue;
 import java.util.TreeMap;
+import java.util.stream.Stream;
 
 /**
  * The Class {@code Matrix} contains methods for performing basic
@@ -112,17 +114,12 @@ public class Matrix {
     }
 
     /**
-     * Prints into display any matrix given
+     * Prints matrix
      * @param z the matrix to print
      */
 
     public void printMatrix(float[][] z){
-        for(int i = 0; i < z.length; i++){
-            for(int j = 0; j < z[i].length; j++){
-                System.out.print(z[i][j] + " ");
-            }
-            System.out.println();
-        }
+        Stream.of(z).map(Arrays::toString).forEach(System.out::print);
     }
 
 }
