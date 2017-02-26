@@ -12,7 +12,7 @@ public class Matrix {
 
     /**
      * Returns the result of multiplying two matrices. If the number of columns of the
-     * fist matrix don't match the number of rows of the second matrix, it throws and
+     * first matrix don't match the number of rows of the second matrix, it throws and
      * exception.
      * @param a the fist matrix
      * @param b the second matrix
@@ -25,7 +25,7 @@ public class Matrix {
         int bRow = b.length;
         int bColumn = b[0].length;
 
-        if(aColumn != bRow) throw new IllegalArgumentException("A:Rows: " + aColumn + " did not match B:Columns " + bRow + ".");
+        if(aColumn != bRow) throw new IllegalArgumentException("A:Rows: " + aColumn + " don't match B:Columns " + bRow + ".");
 
         float[][] c = new float[aRow][bColumn];
 
